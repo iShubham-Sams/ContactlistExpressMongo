@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+#body_heading{
+    text-align: center;
+    margin-top: 25px;
+    color: gray;
+}
+#list_id{
+    background-color: aqua;
+ width: 100%;
+ height:10% ;
+ margin-bottom: 5px;
+border: 1px red solid;
+}
+#list_id p {
+display: inline;
+/* margin-left: -10%; */
+}
+#main_list{
+    list-style: none;
+    position: absolute;
+    left: 35%;
+    width: 30%;
+    border: 1px solid black;
+}

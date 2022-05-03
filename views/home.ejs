@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <h1 id="body_heading">
+        <i class="fas fa-address-book"></i>
+        CONTACT LIST
+    </h1>
+
+    <ul id="main_list" >
+
+        
+            <%for(let i of contact_list){%>
+
+                <li id="list_id">
+                   <p style="margin-right: 55%;"> <%=i.name%> </p>
+                   <p><%=i.phone%></p>
+                   <a href="/delete_contact/?id=<%=i.id%>">
+                       <i class="fas fa-times"></i>
+                   </a>
+                </li>
+                <%}%>
+
+
+                <form action="/creat-contect" method="POST"> 
+                    <input type="text" name="name" placeholder="drop your name">
+                    <input type="number" name="phone" placeholder="drop your phone no">
+
+                    <button type="submit">submit</button>
+                </form>
+        
+    </ul>
+    
+</body>
+<script src="/js/home.js"></script>
+</html>
